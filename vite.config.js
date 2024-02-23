@@ -6,7 +6,8 @@ import path from 'path'
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path(__dirname, 'src')  // 解析@
+      // 将 `@` 符号映射到 `/src` 目录
+      '@': path.resolve(__dirname, 'src')
     }
   },
   plugins: [vue()],
