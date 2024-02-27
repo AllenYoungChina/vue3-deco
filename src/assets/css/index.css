@@ -1,0 +1,96 @@
+:root {
+    --bgcolor: #387197;
+}
+html, body {
+    min-width: 1280px;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    /* 防止导航栏绝对定位后，脱离文档流挡住下方元素 */
+    height: 70px;
+    
+}
+.header-list {
+    /* 顶部导航栏绝对定位 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.header-top {
+    width: 1280px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 200px;
+}
+.logo a {
+    display: inline-block;  /* 不然无法显示图片 */
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 180px;
+    height: 50px;
+}
+/* 头部导航 */
+.header-top ul {
+    /* .logo设置宽度后，ul占据剩下所有的部分 */
+    flex: 1;
+    display: flex;
+}
+.header-top ul li {
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    /* 用于导航下方装饰线的固定定位 */
+    position: relative;
+}
+.header-top ul li span:hover {
+    color: var(--bgcolor);
+}
+.header-top ul li::before {
+    /* 导航下方装饰线 */
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid var(--bgcolor);
+    transition: all 0.2s;
+}
+.header-top ul li:hover::before {
+    content: '';
+    width: 100%;
+    left: 0;
+}
+/* 头部右侧 */
+.header-right {
+    display: flex;
+}
+.header-right-l {
+    /* background: url(../images/telt.png) no-repeat; */
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    /* 蒙版，使用图片提供显示区域 */
+    -webkit-mask-box-image: url(../images/telt.png);
+    background: var(--bgcolor);
+
+}
+.header-right-r p {
+    color: var(--bgcolor);
+    font-weight: 600;
+}
+.header-right-r-number {
+    font-size: 18px;
+}
