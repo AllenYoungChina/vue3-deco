@@ -185,3 +185,83 @@ html, body {
     color: #fff;
     font-weight: 700;
 }
+.container {
+    width: 1280px;
+    margin: auto;
+}
+.container-bg {
+    padding: 50px 0;
+}
+.index-title {
+    text-align: center;
+}
+.index-title h3 {
+    font-size: 42px;
+    font-weight: 700;
+}
+.index-title p {
+    font-size: 20px;
+    color: #666;
+    padding: 20px;
+}
+.advantage-item1 ul,
+.advantage-item2 ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.advantage-item1 li span {
+    font-size: 20px;
+    color: #999;
+}
+.advantage-item1 .advantage-num {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+}
+.advantage-item2 li {
+    text-align: center;
+    width: calc(100%/4);
+    margin: 0 20px;
+}
+.advantage-item2 li i {
+    border: 2px solid var(--bgcolor);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 50px;
+    color: var(--bgcolor);
+    line-height: 100px;
+}
+/* 图标添加抖动动画 */
+.advantage-item2 li i:hover {
+    animation: shake .4s;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(-40deg);
+    }
+    20% {
+        transform: rotate(30deg);
+    }
+    40% {
+        transform: rotate(-20deg);
+    }
+    60% {
+        transform: rotate(20deg);
+    }
+    80% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.advantage-item2 h4 {
+    font-size: 24px;
+    padding: 20px 0;
+}
+.advantage-item2 p {
+    color: #666;
+}
