@@ -374,3 +374,55 @@ html, body {
     transform: translate(-50%, -50%);
     /* transition: all .3s; */
 }
+
+/* 家装资讯 */
+.information-list {
+    display: flex;
+    height: 380px;
+    gap: 0 30px;
+}
+.information-left {
+    width: 40%;
+}
+.information-right {
+    width: 60%;
+}
+.information-right ul {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.information-right ul li {
+    display: flex;
+    gap: 0 20px;
+    height: calc(380px / 3 - 20px);
+}
+.information-r-img {
+    width: 170px;
+    /* 避免弹性布局，子元素宽度无效 */
+    flex-shrink: 0;
+}
+.information-r-img img {
+    width: 100%;
+    height: 100%;
+}
+.information-title {
+    font-size: 16px;
+}
+.information-time {
+    color: #999;
+    margin-top: 10px;
+}
+.information-desc {
+    color: #666;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;  /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical;  /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2;  /** 显示的行数 **/
+}
