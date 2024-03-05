@@ -3,10 +3,10 @@ import { ref } from 'vue'
 import { CountTo } from 'vue3-count-to'
 
 let advantageList1 = ref([
-    {num: '50', name: '万+精英家庭选择'},
-    {num: '29', name: '个城市直营分公司'},
-    {num: '200', name: '余家直营门店'},
-    {num: '200', name: '余辐射服务城市'}
+    {num: 50, name: '万+精英家庭选择'},
+    {num: 29, name: '个城市直营分公司'},
+    {num: 200, name: '余家直营门店'},
+    {num: 200, name: '余辐射服务城市'}
 ])
 
 let advantageList2 = ref([

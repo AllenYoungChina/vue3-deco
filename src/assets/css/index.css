@@ -204,6 +204,7 @@ html, body {
     color: #666;
     padding: 20px;
 }
+/* 品牌优势 */
 .advantage-item1 ul,
 .advantage-item2 ul {
     display: flex;
@@ -264,4 +265,112 @@ html, body {
 }
 .advantage-item2 p {
     color: #666;
+}
+/* 实景案例 */
+/* flex布局 */
+/* .renovation-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.renovation-list ul li {
+    width: calc(100%/3 - 20px);
+    border: 1px solid #ccc;
+} */
+/* 网格布局 */
+.renovation-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:40px;
+}
+.renovation-list ul li {
+    width: calc(1280px/3 - 40px);
+    border: 1px solid #ccc;
+    position: relative;
+}
+.renovation-img {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+}
+.renovation-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+}
+.renovation-box {
+    padding: 20px;
+}
+.renovation-box h3 {
+    font-size: 18px;
+    font-weight: 500;
+    /* 避免标题过长 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.renovation-box-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.renovation-box-info p {
+    color: #999;
+}
+.renovation-box-info span{
+    color: var(--bgcolor);
+}
+/* 1. 鼠标移入li时出现阴影 */
+.renovation-list ul li:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+/* 2. 鼠标移入li时图片放大 */
+.renovation-list ul li:hover .renovation-img img {
+    transform: scale(1.1);
+}
+.renovation-hover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+}
+/* 3. 图片颜色变深 */
+.renovation-list ul li:hover .renovation-hover {
+    width: 100%;
+    height: 225px;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .3);
+}
+/* 4. 鼠标移入时方框的动画 */
+.renovation-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    transition: all .2s;
+}
+.renovation-list ul li:hover .renovation-hover::before {
+    content: '';
+    width: 70%;
+    height: 60%;
+    border: 1px solid #fff;
+}
+/* 5. 查看详情动画 */
+.renovation-hover span {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30px);
+    transition: all .3s;
+}
+.renovation-list ul li:hover .renovation-hover span {
+    transform: translate(-50%, -50%);
+    /* transition: all .3s; */
 }

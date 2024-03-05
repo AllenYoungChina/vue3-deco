@@ -1,6 +1,7 @@
 <script setup>
 import Banner from './banner.vue'
 import Advantage from './advantage.vue'
+import Renovation from './renovation.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import Advantage from './advantage.vue'
         <Banner></Banner>
         <div class="container">
             <Advantage></Advantage>
+            <Renovation></Renovation>
         </div>
     </div>
 </template>

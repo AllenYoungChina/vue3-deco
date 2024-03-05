@@ -23,21 +23,18 @@ let bannerList = ref([
                         </div>
                         <div class="regform">
                             <el-input
-                                v-model="input2"
                                 style="width: 300px"
                                 size="large"
                                 placeholder="请输入姓名"
                                 :prefix-icon="Avatar"
                             />
                             <el-input
-                                v-model="input2"
                                 style="width: 300px"
                                 size="large"
                                 placeholder="请输入电话"
                                 :prefix-icon="PhoneFilled"
                             />
                             <el-input
-                                v-model="input2"
                                 style="width: 300px"
                                 size="large"
                                 placeholder="请输入装修面积"
